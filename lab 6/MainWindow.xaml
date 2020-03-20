@@ -64,9 +64,15 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="8*"/>
+                        
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex6Button"/>
-                    <DataGrid Grid.Row="1" Name="Ex6LbDisplay"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex6Button" Click="Ex6Button_Click"/>
+                    <ListBox Grid.Row="1" Grid.Column="0" Name="Ex6LbDisplay" SelectionChanged="Ex6LbDisplay_SelectionChanged"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Name="ex6tblx" SourceUpdated="ex6tblx_SourceUpdated"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Ex7" Width="75">

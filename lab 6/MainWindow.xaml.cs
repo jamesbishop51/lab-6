@@ -95,5 +95,28 @@ namespace lab_6
                         };
             Ex5LbDisplay.ItemsSource = query.ToList();
         }
+        private void Ex6Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from customer in db.Customers
+                        orderby customer.CompanyName
+                        select customer.CompanyName;
+
+            Ex6LbDisplay.ItemsSource = query.ToList();
+        }
+
+        private void Ex6LbDisplay_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string company = (string)Ex6LbDisplay.SelectedItem;
+
+            if (company != null)
+            {
+                var query = (from detail in db.Order_Details
+                             where detail.Order.Customer.CompanyName == company
+                             select detail.UnitPrice * detail.Quantity).Sum();
+                ex6tblx.Text = string.Format("Total for supplier {0}\n\n{1:c}", company, query);
+            }
+        }
+
+        
     }
 }
