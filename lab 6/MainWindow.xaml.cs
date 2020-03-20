@@ -68,5 +68,18 @@ namespace lab_6
             Ex3LbDisplay.Text = string.Format(
                 "Total number of orders {0}\nValue of Orders {1:C}\nAverage Order Value {2:c}", numberOfOrders, totalValue, AverageValue);
         }
+        //exercise 4
+        private void Ex4Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from customer in db.Customers
+                        where customer.Orders.Count >= 20
+                        select new
+                        {
+                            Name = customer.CompanyName,
+                            OrderCount = customer.Orders.Count
+                        };
+            Ex4LbDisplay.ItemsSource = query.ToList();
+
+        }
     }
 }
