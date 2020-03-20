@@ -55,7 +55,7 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex5Button"/>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex5Button" Click="Ex5Button_Click"/>
                     <DataGrid Grid.Row="1" Name="Ex5LbDisplay"/>
                 </Grid>
             </TabItem>

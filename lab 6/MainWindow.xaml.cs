@@ -81,5 +81,19 @@ namespace lab_6
             Ex4LbDisplay.ItemsSource = query.ToList();
 
         }
+        // exercise 5
+        private void Ex5Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from customer in db.Customers
+                        where customer.Orders.Count < 3
+                        select new
+                        {
+                            Company = customer.CompanyName,
+                            city = customer.City,
+                            region = customer.Region,
+                            OrderCount = customer.Orders.Count
+                        };
+            Ex5LbDisplay.ItemsSource = query.ToList();
+        }
     }
 }
