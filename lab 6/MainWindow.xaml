@@ -36,7 +36,7 @@
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
                     <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex3Button" Click="Ex3Button_Click"/>
-                    <DataGrid Grid.Row="1" Name="Ex3LbDisplay"/>
+                    <TextBlock Grid.Row="1" Name="Ex3LbDisplay"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Ex4" Width="75">

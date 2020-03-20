@@ -49,14 +49,24 @@ namespace lab_6
 
             Ex2LbDisplay.ItemsSource = result;
         }
-
+        //exercise three
         private void Ex3Button_Click(object sender, RoutedEventArgs e)
         {
+            //return the total number of orders for products 7
             var query1 = (from detail in db.Order_Details
                           where detail.ProductID == 7
                           select detail);
+            // returns the total value of the orders for product 7
+            var query2 = (from detail in db.Order_Details
+                          where detail.ProductID == 7
+                          select detail.UnitPrice * detail.Quantity);
 
             int numberOfOrders = query1.Count();
+            decimal totalValue = query2.Sum();
+            decimal AverageValue = query2.Average();
+
+            Ex3LbDisplay.Text = string.Format(
+                "Total number of orders {0}\nValue of Orders {1:C}\nAverage Order Value {2:c}", numberOfOrders, totalValue, AverageValue);
         }
     }
 }
