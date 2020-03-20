@@ -12,8 +12,71 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
-                        
+                        <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex1Button" Click="Ex1Button_Click"/>
+                    <DataGrid Grid.Row="1" Name="Ex1LbDisplay"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Ex2" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex2Button" Click="Ex2Button_Click"/>
+                    <DataGrid Grid.Row="1" Name="Ex2LbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex3" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex3Button" Click="Ex3Button_Click"/>
+                    <DataGrid Grid.Row="1" Name="Ex3LbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex4" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex4Button"/>
+                    <DataGrid Grid.Row="1" Name="Ex4LbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex5" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex5Button"/>
+                    <DataGrid Grid.Row="1" Name="Ex5LbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex6" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex6Button"/>
+                    <DataGrid Grid.Row="1" Name="Ex6LbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex7" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex7Button"/>
+                    <DataGrid Grid.Row="1" Name="Ex7LbDisplay"/>
                 </Grid>
             </TabItem>
         </TabControl>
