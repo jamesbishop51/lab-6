@@ -116,7 +116,19 @@ namespace lab_6
                 ex6tblx.Text = string.Format("Total for supplier {0}\n\n{1:c}", company, query);
             }
         }
+        //exercise 7
+        private void Ex7Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from p in db.Products
+                        group p by p.Category.CategoryName into g
+                        orderby g.Count() descending
+                        select new
+                        {
+                            category = g.Key,
+                            count = g.Count()
+                        };
 
-        
+            Ex7LbDisplay.ItemsSource = query.ToList();
+        }
     }
 }
